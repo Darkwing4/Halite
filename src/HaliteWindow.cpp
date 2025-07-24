@@ -1,5 +1,6 @@
 
-//         Copyright Eóin O'Callaghan 2006 - 2009.
+#include "DarkTheme.hpp"
+//         Copyright EÃ³in O'Callaghan 2006 - 2009.
 // Distributed under the Boost Software License, Version 1.0.
 //    (See accompanying file LICENSE_1_0.txt or copy at
 //          http://www.boost.org/LICENSE_1_0.txt)
@@ -810,7 +811,14 @@ LRESULT HaliteWindow::OnViewStatusBar(WORD wNotifyCode, WORD wID, HWND hWndCtl, 
 
 LRESULT HaliteWindow::OnEraseBkgnd(HDC dc)
 {
-	return 1;
+        if (hal::dark_theme_enabled())
+        {
+                RECT rc;
+                GetClientRect(&rc);
+                FillRect(dc, &rc, hal::dark_background_brush());
+                return 1;
+        }
+        return 1;
 }
 
 LRESULT HaliteWindow::OnPaint(HDC dc)
