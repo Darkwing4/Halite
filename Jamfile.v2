@@ -32,6 +32,7 @@ SOURCES =
 	ConfigOptions.cpp
 	NTray.cpp
 	UxthemeWrapper.cpp
+        DarkTheme.cpp
 	
 	advtabs/Torrent.cpp
 	advtabs/Peers.cpp
@@ -56,6 +57,7 @@ SOURCES_MINI =
 	HaliteWindowMini.cpp
 	NewTorrentDialog.cpp
 	NTray.cpp
+        DarkTheme.cpp
 	;
 	
 RESOURCES =

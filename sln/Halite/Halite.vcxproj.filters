@@ -57,6 +57,9 @@
     <ClCompile Include="..\..\src\UxthemeWrapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\DarkTheme.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\src\win32_exception.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

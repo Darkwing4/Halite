@@ -1,5 +1,22 @@
 
-//         Copyright Eóin O'Callaghan 2006 - 2009.
+#include "DarkTheme.hpp"
+                if (hal::dark_theme_enabled())
+                {
+                        ::SetBkColor(hDC, RGB(32,32,32));
+                        ::SetTextColor(hDC, RGB(220,220,220));
+                        SetMsgHandled(true);
+                        return (LRESULT)hal::dark_background_brush();
+                }
+
+
+                if (hal::dark_theme_enabled())
+                {
+                        ::SetBkColor(hDC, RGB(32,32,32));
+                        ::SetTextColor(hDC, RGB(220,220,220));
+                        SetMsgHandled(true);
+                        return (LRESULT)hal::dark_background_brush();
+                }
+//         Copyright EÃ³in O'Callaghan 2006 - 2009.
 // Distributed under the Boost Software License, Version 1.0.
 //    (See accompanying file LICENSE_1_0.txt or copy at
 //          http://www.boost.org/LICENSE_1_0.txt)
